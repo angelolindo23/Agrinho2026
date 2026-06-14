@@ -64,3 +64,114 @@
 
 </body>
 </html>
+
+  class
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f5fdf5;
+  color:#333;
+}
+
+header{
+  background:linear-gradient(135deg,#2e7d32,#66bb6a);
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+
+.hero{
+  text-align:center;
+  padding:40px 20px;
+}
+
+.hero h2{
+  color:#2e7d32;
+  margin-bottom:15px;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  padding:30px;
+}
+
+.card{
+  background:white;
+  width:280px;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card h3{
+  color:#388e3c;
+  margin-bottom:10px;
+}
+
+.impacto{
+  text-align:center;
+  padding:40px;
+}
+
+.contador{
+  margin:20px 0;
+}
+
+#numero{
+  font-size:60px;
+  color:#2e7d32;
+}
+
+button{
+  background:#2e7d32;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+button:hover{
+  background:#1b5e20;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#2e7d32;
+  color:white;
+  margin-top:30px;
+}
+
+
+
+
+
+function contar() {
+  let numero = document.getElementById("numero");
+  let valor = 0;
+
+  let intervalo = setInterval(() => {
+    valor += 10;
+    numero.textContent = valor;
+
+    if(valor >= 1000){
+      clearInterval(intervalo);
+    }
+  }, 20);
+}
